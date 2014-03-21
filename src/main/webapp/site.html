@@ -1,25 +1,25 @@
 <!--
-  Copyright (C) 2014 Naveen Malik
- 
-  Needless Compass is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
- 
-  Needless Compass is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
- 
-  You should have received a copy of the GNU General Public License
-  along with Needless Compass.  If not, see <http://www.gnu.org/licenses/>.
+Copyright (C) 2014 Naveen Malik
+Needless Compass is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+Needless Compass is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with Needless Compass.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <!DOCTYPE html>
 <html>
     <head>
         <title>Needless Compass</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- icon source: http://4vector.com/free-vector/compass-rose-98397 -->
         <link rel="shortcut icon" href="images/compass_rose.ico"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
         <link rel="stylesheet" href="css/styles.css"/>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript">
@@ -79,45 +79,59 @@
         </script>
     </head>
     <body>
-        Needless Compass: Site<br>
-        <form name="theForm">
-            <fieldset>
-                <table>
-                    <tr>
-                        <td>
-                            <label for="name" id="name_label">Name *</label>
-                        </td>
-                        <td>
-                            <input name="name" id="name" type="text" size="100" required placeholder="The name"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="streetAddress" id="streetAddress_label">Street Address *</label>
-                        </td>
-                        <td>
-                            <input name="streetAddress" id="streetAddress" type="text" size="100" required placeholder="The address"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="categories" id="categories_label">Categories</label>
-                        </td>
-                        <td>
-                            <input name="categories" id="categories" type="text" size="100" required placeholder="Comma separated list of categories"/>
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" id="addPoi" value="Add!"/>
-                <span id="result"></span>
-            </fieldset>
-        </form>
-        <footer>
-            <hr>
-            <a href="https://github.com/jewzaam/needless-compass">Source Code</a> | 
-            <a href="http://www.gnu.org/licenses/gpl.txt">GPLv3 license</a> | 
-            <a href="http://opendatacommons.org/lice nses/odbl/">Data License: ODbL</a> |
-            <a href="http://project-osrm.org/">Routes: OSRM</a>
-        </footer>
-    </body>
-</html>
+        <div class="container">
+            <h1>Needless Compass: Site</h1>
+            <form name="theForm" class="form-horizontal">
+                <fieldset>
+                    <div class="control-group">
+                        <label for="name" class="control-label" id="name_label">Name *</label>
+                        <div class="controls">
+                            <input name="name" id="name" type="text"required placeholder="The name"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="streetAddress" class="control-label" id="streetAddress_label">Street Address *</label>
+                        <div class="controls">
+                            <input name="streetAddress" id="streetAddress" type="text" required placeholder="The address"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="categories" class="control-label" id="categories_label">Categories</label>
+                        <div class="controls">
+                            <input name="categories" id="categories" type="text" required placeholder="Comma separated list of categories"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" id="addPoi" value="Add!"/>
+                        </div>
+                        <span id="result"></span>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="index.html">Needless Compass</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="house.html">Add House</a></li>
+                            <li><a href="site.html">Add Site</a></li>
+                            <li><a href="https://github.com/jewzaam/needless-compass">Source</a></li>
+                            <li><a href="http://www.gnu.org/licenses/gpl.txt">GPL</a></li>
+                            <li><a href="http://opendatacommons.org/lice%20nses/odbl/">Data License</a></li>
+                            <li><a href="http://project-osrm.org/">Routes</a></li>
+                        </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

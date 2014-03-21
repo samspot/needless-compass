@@ -1,16 +1,16 @@
 <!--
   Copyright (C) 2014 Naveen Malik
- 
+
   Needless Compass is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
   (at your option) any later version.
- 
+
   Needless Compass is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
- 
+
   You should have received a copy of the GNU General Public License
   along with Needless Compass.  If not, see <http://www.gnu.org/licenses/>.
 -->
@@ -18,8 +18,11 @@
 <html>
     <head>
         <title>Needless Compass</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- icon source: http://4vector.com/free-vector/compass-rose-98397 -->
         <link rel="shortcut icon" href="images/compass_rose.ico"/>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/styles.css"/>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript">
@@ -76,7 +79,7 @@
         </script>
     </head>
     <body>
-        Needless Compass: House<br>
+        <h1>Needless Compass: House</h1>
         <form name="theForm">
             <fieldset>
                 <table>
@@ -85,7 +88,7 @@
                             <label for="name" id="name_label">Name *</label>
                         </td>
                         <td>
-                            <input name="name" id="name" type="text" size="100" required placeholder="The name"/>
+                            <input name="name" id="name" type="text" required placeholder="The name"/>
                         </td>
                     </tr>
                     <tr>
@@ -103,8 +106,8 @@
         </form>
         <footer>
             <hr>
-            <a href="https://github.com/jewzaam/needless-compass">Source Code</a> | 
-            <a href="http://www.gnu.org/licenses/gpl.txt">GPLv3 license</a> | 
+            <a href="https://github.com/jewzaam/needless-compass">Source Code</a> |
+            <a href="http://www.gnu.org/licenses/gpl.txt">GPLv3 license</a> |
             <a href="http://opendatacommons.org/lice nses/odbl/">Data License: ODbL</a> |
             <a href="http://project-osrm.org/">Routes: OSRM</a>
         </footer>
